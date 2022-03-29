@@ -82,3 +82,8 @@ Email:
 ## Self-managed Vault - Generate-Root API
 Email:
 >Hello,<br><br>The Vault API has no root token decoding functionality. Decoding the root token consists of two steps:<br><br>1. Decode the base64 encoded token<br>2. XOR the decoded token with the OTP<br><br>Please check [here](https://discuss.hashicorp.com/t/deriving-root-token-from-generate-root-api/7337) for additional information to help you create your own decoding tool.<br><br>Regards<br>Sylvia
+### Steps
+1. Started a Vault server and used the API to generate a new root token.
+2. Searched for "vault decode root token api" and got a result from [Discuss](https://discuss.hashicorp.com/t/deriving-root-token-from-generate-root-api/7337).
+3. Decoded new token with CLI and wrote a Python script to check the discussed decoding method.
+4. Polished Python code (added argparse for better handling of arguments instead of just reading argv).
