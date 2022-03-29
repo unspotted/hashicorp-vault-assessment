@@ -74,3 +74,7 @@ $ aws iam list-users{
     ]
 }
 ```
+
+## Functional Task
+
+>Hello Joe,<br><br>Vault policies have multiple rules for priority detailed [here](https://www.vaultproject.io/docs/concepts/policies#policy-syntax). In your case `apps/data/+/+/secrets/*` has lower priority than `apps/data/*` as it has more wildcard segments.<br><br>Unfortunately, as of now there is no option to override the priority of policy paths. Secrets and policies will need to be reorganized to achieve the desired behavior.<br><br>Regards,<br>Sylvia
