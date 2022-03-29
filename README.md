@@ -76,5 +76,9 @@ $ aws iam list-users{
 ```
 
 ## Functional Task
-
+Email:
 >Hello Joe,<br><br>Vault policies have multiple rules for priority detailed [here](https://www.vaultproject.io/docs/concepts/policies#policy-syntax). In your case `apps/data/+/+/secrets/*` has lower priority than `apps/data/*` as it has more wildcard segments.<br><br>Unfortunately, as of now there is no option to override the priority of policy paths. Secrets and policies will need to be reorganized to achieve the desired behavior.<br><br>Regards,<br>Sylvia
+
+## Self-managed Vault - Generate-Root API
+Email:
+>Hello,<br><br>The Vault API has no root token decoding functionality. Decoding the root token consists of two steps:<br><br>1. Decode the base64 encoded token<br>2. XOR the decoded token with the OTP<br><br>Please check [here](https://discuss.hashicorp.com/t/deriving-root-token-from-generate-root-api/7337) for additional information to help you create your own decoding tool.<br><br>Regards<br>Sylvia
